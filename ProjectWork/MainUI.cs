@@ -38,7 +38,7 @@ namespace ProjectWork
 
         private void promotionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PromotionUI promotionUi = new PromotionUI();
+            PromotionUI promotionUi = new PromotionUI(employeeList,designationList);
             promotionUi.Show();
         }
 

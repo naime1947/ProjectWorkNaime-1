@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBoxEmployeeCode = new System.Windows.Forms.ComboBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewCareerHistory = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxCurrentDesignation = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxNeDesigList = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,21 +56,23 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Employee Code";
             // 
-            // button2
+            // btnFind
             // 
-            this.button2.Location = new System.Drawing.Point(270, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Find";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnFind.Location = new System.Drawing.Point(270, 21);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(75, 23);
+            this.btnFind.TabIndex = 2;
+            this.btnFind.Text = "Find";
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
-            // textBox2
+            // textBoxName
             // 
-            this.textBox2.Location = new System.Drawing.Point(153, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 20);
-            this.textBox2.TabIndex = 0;
+            this.textBoxName.Location = new System.Drawing.Point(153, 60);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.ReadOnly = true;
+            this.textBoxName.Size = new System.Drawing.Size(114, 20);
+            this.textBoxName.TabIndex = 0;
             // 
             // label2
             // 
@@ -81,20 +83,21 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Name";
             // 
-            // comboBox1
+            // comboBoxEmployeeCode
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(146, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.comboBoxEmployeeCode.FormattingEnabled = true;
+            this.comboBoxEmployeeCode.Location = new System.Drawing.Point(146, 23);
+            this.comboBoxEmployeeCode.Name = "comboBoxEmployeeCode";
+            this.comboBoxEmployeeCode.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxEmployeeCode.TabIndex = 3;
             // 
-            // textBox1
+            // textBoxEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxEmail.Location = new System.Drawing.Point(153, 86);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.ReadOnly = true;
+            this.textBoxEmail.Size = new System.Drawing.Size(114, 20);
+            this.textBoxEmail.TabIndex = 0;
             // 
             // label3
             // 
@@ -105,19 +108,19 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Email";
             // 
-            // listView1
+            // listViewCareerHistory
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewCareerHistory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.Location = new System.Drawing.Point(35, 261);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(475, 97);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewCareerHistory.Location = new System.Drawing.Point(35, 261);
+            this.listViewCareerHistory.Name = "listViewCareerHistory";
+            this.listViewCareerHistory.Size = new System.Drawing.Size(475, 97);
+            this.listViewCareerHistory.TabIndex = 4;
+            this.listViewCareerHistory.UseCompatibleStateImageBehavior = false;
+            this.listViewCareerHistory.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -139,12 +142,13 @@
             this.columnHeader4.Text = "Total Salary";
             this.columnHeader4.Width = 108;
             // 
-            // textBox3
+            // textBoxCurrentDesignation
             // 
-            this.textBox3.Location = new System.Drawing.Point(153, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 20);
-            this.textBox3.TabIndex = 0;
+            this.textBoxCurrentDesignation.Location = new System.Drawing.Point(153, 112);
+            this.textBoxCurrentDesignation.Name = "textBoxCurrentDesignation";
+            this.textBoxCurrentDesignation.ReadOnly = true;
+            this.textBoxCurrentDesignation.Size = new System.Drawing.Size(114, 20);
+            this.textBoxCurrentDesignation.TabIndex = 0;
             // 
             // label4
             // 
@@ -164,44 +168,45 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "New Designation";
             // 
-            // comboBox2
+            // comboBoxNeDesigList
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(146, 160);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 3;
+            this.comboBoxNeDesigList.FormattingEnabled = true;
+            this.comboBoxNeDesigList.Location = new System.Drawing.Point(146, 160);
+            this.comboBoxNeDesigList.Name = "comboBoxNeDesigList";
+            this.comboBoxNeDesigList.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxNeDesigList.TabIndex = 3;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Location = new System.Drawing.Point(273, 158);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(273, 158);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // PromotionUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 390);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.listViewCareerHistory);
+            this.Controls.Add(this.comboBoxNeDesigList);
+            this.Controls.Add(this.comboBoxEmployeeCode);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnFind);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxCurrentDesignation);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxName);
             this.Name = "PromotionUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promotion";
+            this.Load += new System.EventHandler(this.PromotionUI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,21 +214,21 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBoxEmployeeCode;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewCareerHistory;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxCurrentDesignation;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxNeDesigList;
+        private System.Windows.Forms.Button btnSave;
     }
 }
