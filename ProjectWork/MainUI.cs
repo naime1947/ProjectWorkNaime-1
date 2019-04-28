@@ -15,17 +15,18 @@ namespace ProjectWork
     public partial class MainUI : Form
     {
         List<Designation> designationList;
+        List<Employee> employeeList;
         
         public MainUI()
         {
             InitializeComponent();
             designationList = new List<Designation>();
-
+            employeeList = new List<Employee>();
         }
 
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddEmployeeUI anAddEmployeeUi = new AddEmployeeUI();
+            AddEmployeeUI anAddEmployeeUi = new AddEmployeeUI(employeeList,designationList);
             anAddEmployeeUi.Show();
         }
 

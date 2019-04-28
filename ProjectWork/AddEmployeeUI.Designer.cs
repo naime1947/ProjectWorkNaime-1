@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxContactNo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.comboBoxDesignation = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.dateTimePickerJoiningDate = new System.Windows.Forms.DateTimePicker();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.listViewEmployeList = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,10 +51,9 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBoxCode = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnNew = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,12 +66,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxName.Location = new System.Drawing.Point(85, 45);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(204, 20);
+            this.textBoxName.TabIndex = 1;
             // 
             // label2
             // 
@@ -82,12 +82,12 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Email";
             // 
-            // textBox2
+            // textBoxEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(85, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBoxEmail.Location = new System.Drawing.Point(85, 71);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(204, 20);
+            this.textBoxEmail.TabIndex = 1;
             // 
             // label3
             // 
@@ -98,12 +98,12 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Contact No";
             // 
-            // textBox3
+            // textBoxContactNo
             // 
-            this.textBox3.Location = new System.Drawing.Point(85, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(204, 20);
-            this.textBox3.TabIndex = 1;
+            this.textBoxContactNo.Location = new System.Drawing.Point(85, 97);
+            this.textBoxContactNo.Name = "textBoxContactNo";
+            this.textBoxContactNo.Size = new System.Drawing.Size(204, 20);
+            this.textBoxContactNo.TabIndex = 1;
             // 
             // label4
             // 
@@ -114,21 +114,21 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Address";
             // 
-            // textBox4
+            // textBoxAddress
             // 
-            this.textBox4.Location = new System.Drawing.Point(85, 123);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(204, 36);
-            this.textBox4.TabIndex = 1;
+            this.textBoxAddress.Location = new System.Drawing.Point(85, 123);
+            this.textBoxAddress.Multiline = true;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(204, 36);
+            this.textBoxAddress.TabIndex = 1;
             // 
-            // comboBox1
+            // comboBoxDesignation
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(85, 165);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(204, 21);
-            this.comboBox1.TabIndex = 2;
+            this.comboBoxDesignation.FormattingEnabled = true;
+            this.comboBoxDesignation.Location = new System.Drawing.Point(85, 165);
+            this.comboBoxDesignation.Name = "comboBoxDesignation";
+            this.comboBoxDesignation.Size = new System.Drawing.Size(204, 21);
+            this.comboBoxDesignation.TabIndex = 2;
             // 
             // label5
             // 
@@ -148,25 +148,26 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Joined Date";
             // 
-            // dateTimePicker1
+            // dateTimePickerJoiningDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(85, 192);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(204, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePickerJoiningDate.Location = new System.Drawing.Point(85, 192);
+            this.dateTimePickerJoiningDate.Name = "dateTimePickerJoiningDate";
+            this.dateTimePickerJoiningDate.Size = new System.Drawing.Size(204, 20);
+            this.dateTimePickerJoiningDate.TabIndex = 3;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Location = new System.Drawing.Point(203, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(203, 230);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(86, 23);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // listView1
+            // listViewEmployeList
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewEmployeList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader7,
             this.columnHeader2,
@@ -175,17 +176,21 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader8});
-            this.listView1.Location = new System.Drawing.Point(334, 19);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(539, 258);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewEmployeList.Location = new System.Drawing.Point(334, 19);
+            this.listViewEmployeList.Name = "listViewEmployeList";
+            this.listViewEmployeList.Size = new System.Drawing.Size(539, 258);
+            this.listViewEmployeList.TabIndex = 5;
+            this.listViewEmployeList.UseCompatibleStateImageBehavior = false;
+            this.listViewEmployeList.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Sl#";
             this.columnHeader1.Width = 54;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Code";
             // 
             // columnHeader2
             // 
@@ -216,19 +221,19 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.textBoxCode);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxName);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnNew);
+            this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.dateTimePickerJoiningDate);
+            this.groupBox1.Controls.Add(this.textBoxEmail);
+            this.groupBox1.Controls.Add(this.comboBoxDesignation);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBoxAddress);
+            this.groupBox1.Controls.Add(this.textBoxContactNo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
@@ -239,14 +244,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee Entry";
             // 
-            // button2
+            // textBoxCode
             // 
-            this.button2.Location = new System.Drawing.Point(111, 230);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "New";
-            this.button2.UseVisualStyleBackColor = true;
+            this.textBoxCode.Location = new System.Drawing.Point(85, 19);
+            this.textBoxCode.Name = "textBoxCode";
+            this.textBoxCode.Size = new System.Drawing.Size(204, 20);
+            this.textBoxCode.TabIndex = 1;
             // 
             // label7
             // 
@@ -257,16 +260,15 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Code";
             // 
-            // textBox5
+            // btnNew
             // 
-            this.textBox5.Location = new System.Drawing.Point(85, 19);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(204, 20);
-            this.textBox5.TabIndex = 1;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Code";
+            this.btnNew.Location = new System.Drawing.Point(111, 230);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(86, 23);
+            this.btnNew.TabIndex = 4;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // AddEmployeeUI
             // 
@@ -274,10 +276,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 305);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewEmployeList);
             this.Name = "AddEmployeeUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddEmployee";
+            this.Load += new System.EventHandler(this.AddEmployeeUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -287,19 +290,19 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxContactNo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBoxAddress;
+        private System.Windows.Forms.ComboBox comboBoxDesignation;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerJoiningDate;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ListView listViewEmployeList;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -308,8 +311,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.TextBox textBoxCode;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ColumnHeader columnHeader7;
     }
