@@ -38,7 +38,37 @@ namespace ProjectWork
 
 
             designationList.Add(designation);
+            PopulateListViewWithDesignation();
 
+        }
+
+        private void PopulateListViewWithDesignation()
+        {
+            listViewDesignationView.Items.Clear();
+            
+            if (designationList != null)
+            {
+                foreach (var designation in designationList)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.SubItems.Add(designation.Title);
+                    item.SubItems.Add(designation.Code);
+                    item.SubItems.Add(designation.SalaryBasic.ToString());
+                    item.SubItems.Add(designation.HouseRent.ToString());
+                    item.SubItems.Add(designation.MedicalAmount.ToString());
+                    item.SubItems.Add(designation.Total.ToString());
+
+                    listViewDesignationView.Items.Add(item);
+
+                }
+            }
+           
+            
+        }
+
+        private void AddViewDesignationUI_Load(object sender, EventArgs e)
+        {
+            PopulateListViewWithDesignation();
         }
     }
 }

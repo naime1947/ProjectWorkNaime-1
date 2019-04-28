@@ -66,7 +66,7 @@
             this.textBoxTitle.Location = new System.Drawing.Point(104, 26);
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(204, 20);
-            this.textBoxTitle.TabIndex = 6;
+            this.textBoxTitle.TabIndex = 0;
             // 
             // label1
             // 
@@ -91,7 +91,7 @@
             this.textBoxCode.Location = new System.Drawing.Point(104, 52);
             this.textBoxCode.Name = "textBoxCode";
             this.textBoxCode.Size = new System.Drawing.Size(204, 20);
-            this.textBoxCode.TabIndex = 6;
+            this.textBoxCode.TabIndex = 1;
             // 
             // listViewDesignationView
             // 
@@ -157,7 +157,7 @@
             this.textBoxSalaryBasic.Location = new System.Drawing.Point(104, 89);
             this.textBoxSalaryBasic.Name = "textBoxSalaryBasic";
             this.textBoxSalaryBasic.Size = new System.Drawing.Size(204, 20);
-            this.textBoxSalaryBasic.TabIndex = 6;
+            this.textBoxSalaryBasic.TabIndex = 2;
             // 
             // label4
             // 
@@ -173,7 +173,7 @@
             this.textBoxHouseRent.Location = new System.Drawing.Point(104, 115);
             this.textBoxHouseRent.Name = "textBoxHouseRent";
             this.textBoxHouseRent.Size = new System.Drawing.Size(204, 20);
-            this.textBoxHouseRent.TabIndex = 6;
+            this.textBoxHouseRent.TabIndex = 3;
             // 
             // label5
             // 
@@ -189,7 +189,7 @@
             this.textBoxMedicalAmount.Location = new System.Drawing.Point(104, 141);
             this.textBoxMedicalAmount.Name = "textBoxMedicalAmount";
             this.textBoxMedicalAmount.Size = new System.Drawing.Size(204, 20);
-            this.textBoxMedicalAmount.TabIndex = 6;
+            this.textBoxMedicalAmount.TabIndex = 4;
             // 
             // label6
             // 
@@ -206,7 +206,7 @@
             this.textBoxTotal.Location = new System.Drawing.Point(104, 171);
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.Size = new System.Drawing.Size(204, 20);
-            this.textBoxTotal.TabIndex = 6;
+            this.textBoxTotal.TabIndex = 5;
             // 
             // AddViewDesignationUI
             // 
@@ -230,6 +230,7 @@
             this.Name = "AddViewDesignationUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add View Designation";
+            this.Load += new System.EventHandler(this.AddViewDesignationUI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
