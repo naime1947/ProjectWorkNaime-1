@@ -34,13 +34,56 @@ namespace ProjectWork
 
             comboBoxNeDesigList.DataSource = designationList;
             comboBoxNeDesigList.DisplayMember = "Title";
+
+
         }
 
        
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            FindCodeInEmployee();
+            string code = comboBoxEmployeeCode.Text;
+            Employee employee =  FindEmployee(code);
+            if (employee != null)
+            {
+                textBoxName.Text = employee.Name;
+                textBoxEmail.Text = employee.Email;
+                textBoxCurrentDesignation.Text = employee.CurrentDesignation.Title;
+            }
+            else { MessageBox.Show("Rocords Not Found"); }
+
+            PopulateCareerHistoryListView();
+        }
+
+        private Employee FindEmployee(string code)
+        {
+            foreach (var employee in employeeList)
+            {
+                if (employee.Code == code)
+                {
+                    return employee;
+                }
+            }
+            return null;
+        }
+
+        private void PopulateCareerHistoryListView()
+        {
+            string code = comboBoxEmployeeCode.Text;
+            Employee employee = FindEmployee(code);
+
+            listViewCareerHistory.Items.Clear();
+
+            foreach (var career in employee.careerHistorieList)
+            {
+                ListViewItem item = new ListViewItem();
+                item.SubItems.Add(career.StartDate.ToShortDateString());
+                if (career.EndDate == null) { item.SubItems.Add(""); } else { item.SubItems.Add(career.EndDateNoNull.ToShortDateString()); }
+                item.SubItems.Add(career.Designation.Title);
+                item.SubItems.Add(career.TotalSalary.ToString());
+
+                listViewCareerHistory.Items.Add(item);
+            }
         }
 
         private void FindCodeInEmployee()
@@ -54,7 +97,7 @@ namespace ProjectWork
                     Employee selectedEmployee = employee;
                     textBoxName.Text = employee.Name;
                     textBoxEmail.Text = employee.Email;
-                    textBoxCurrentDesignation.Text = employee.Designation.Title;
+                    textBoxCurrentDesignation.Text = employee.CurrentDesignation.Title;
                     flag = false;
                     break;
 

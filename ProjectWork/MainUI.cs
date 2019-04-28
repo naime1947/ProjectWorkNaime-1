@@ -16,6 +16,7 @@ namespace ProjectWork
     {
         List<Designation> designationList;
         List<Employee> employeeList;
+
         
         public MainUI()
         {
@@ -52,6 +53,11 @@ namespace ProjectWork
         {
             EmployeeResignationUI employeeResignationUi = new EmployeeResignationUI();
             employeeResignationUi.Show();
+        }
+
+        private void MainUI_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

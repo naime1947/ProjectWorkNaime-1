@@ -100,7 +100,7 @@
             // addDesignationToolStripMenuItem
             // 
             this.addDesignationToolStripMenuItem.Name = "addDesignationToolStripMenuItem";
-            this.addDesignationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addDesignationToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.addDesignationToolStripMenuItem.Text = "Add Designation";
             this.addDesignationToolStripMenuItem.Click += new System.EventHandler(this.addDesignationToolStripMenuItem_Click);
             // 
@@ -115,6 +115,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainUI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainUI_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

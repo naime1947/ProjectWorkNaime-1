@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxNeDesigList = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -114,7 +115,8 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader5});
             this.listViewCareerHistory.Location = new System.Drawing.Point(35, 261);
             this.listViewCareerHistory.Name = "listViewCareerHistory";
             this.listViewCareerHistory.Size = new System.Drawing.Size(475, 97);
@@ -124,22 +126,22 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Start Date";
+            this.columnHeader1.Text = "Sl#";
             this.columnHeader1.Width = 80;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "End Date";
+            this.columnHeader2.Text = "Start Date";
             this.columnHeader2.Width = 96;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Designation";
+            this.columnHeader3.Text = "End Date";
             this.columnHeader3.Width = 98;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Total Salary";
+            this.columnHeader4.Text = "Designation";
             this.columnHeader4.Width = 108;
             // 
             // textBoxCurrentDesignation
@@ -184,6 +186,10 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Total Salary";
             // 
             // PromotionUI
             // 
@@ -230,5 +236,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxNeDesigList;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

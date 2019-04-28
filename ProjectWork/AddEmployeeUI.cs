@@ -97,10 +97,15 @@ namespace ProjectWork
                     ContactNo = textBoxContactNo.Text,
                     Email = textBoxEmail.Text,
                     Address = textBoxAddress.Text,
-                    Designation = (Designation)comboBoxDesignation.SelectedItem,
                     JoiningDate = dateTimePickerJoiningDate.Value
                 };
 
+                CareerHistory careerHistory = new CareerHistory();
+                careerHistory.StartDate = employee.JoiningDate;
+                careerHistory.EndDate = null;
+                careerHistory.Designation = (Designation) comboBoxDesignation.SelectedValue;
+
+                employee.careerHistorieList.Add(careerHistory);
 
 
                 employeeList.Add(employee);
@@ -133,7 +138,7 @@ namespace ProjectWork
                     item.SubItems.Add(employee.Email);
                     item.SubItems.Add(employee.ContactNo);
                     item.SubItems.Add(employee.Address);
-                    item.SubItems.Add(employee.Designation.Title);
+                    item.SubItems.Add(employee.CurrentDesignation.Title);
                     item.SubItems.Add(employee.JoiningDate.ToShortDateString());
 
                     listViewEmployeList.Items.Add(item);
