@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AllClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ProjectWork
 {
     public partial class MainUI : Form
     {
+        List<Designation> designationList;
+        
         public MainUI()
         {
             InitializeComponent();
+            designationList = new List<Designation>();
+
         }
 
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -25,7 +31,7 @@ namespace ProjectWork
 
         private void addDesignationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddViewDesignationUI addViewDesignationUi = new AddViewDesignationUI();
+            AddViewDesignationUI addViewDesignationUi = new AddViewDesignationUI(designationList);
             addViewDesignationUi.Show();
         }
 
