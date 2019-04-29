@@ -10,7 +10,6 @@ namespace AllClasses
     {
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public DateTime EndDateNoNull { get; set; }
         public Designation Designation { get; set; }
         public double TotalSalary
         {

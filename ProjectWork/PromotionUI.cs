@@ -42,8 +42,7 @@ namespace ProjectWork
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            string code = comboBoxEmployeeCode.Text;
-            Employee employee =  FindEmployee(code);
+            Employee employee =  FindEmployee();
             if (employee != null)
             {
                 textBoxName.Text = employee.Name;
@@ -55,8 +54,9 @@ namespace ProjectWork
             PopulateCareerHistoryListView();
         }
 
-        private Employee FindEmployee(string code)
+        private Employee FindEmployee()
         {
+            string code = comboBoxEmployeeCode.Text;
             foreach (var employee in employeeList)
             {
                 if (employee.Code == code)
@@ -70,15 +70,16 @@ namespace ProjectWork
         private void PopulateCareerHistoryListView()
         {
             string code = comboBoxEmployeeCode.Text;
-            Employee employee = FindEmployee(code);
+            Employee employee = FindEmployee();
 
             listViewCareerHistory.Items.Clear();
+            int counter = 0;
 
             foreach (var career in employee.careerHistorieList)
             {
-                ListViewItem item = new ListViewItem();
+                ListViewItem item = new ListViewItem((++counter).ToString());
                 item.SubItems.Add(career.StartDate.ToShortDateString());
-                if (career.EndDate == null) { item.SubItems.Add(""); } else { item.SubItems.Add(career.EndDateNoNull.ToShortDateString()); }
+                if (career.EndDate == null) { item.SubItems.Add(""); } else { item.SubItems.Add(career.EndDate.Value.ToShortDateString()); }
                 item.SubItems.Add(career.Designation.Title);
                 item.SubItems.Add(career.TotalSalary.ToString());
 
@@ -86,24 +87,38 @@ namespace ProjectWork
             }
         }
 
-        private void FindCodeInEmployee()
-        {
-            string code = comboBoxEmployeeCode.Text;
-            bool flag = true;
-            foreach (var employee in employeeList)
-            {
-                if (employee.Code == code)
-                {
-                    Employee selectedEmployee = employee;
-                    textBoxName.Text = employee.Name;
-                    textBoxEmail.Text = employee.Email;
-                    textBoxCurrentDesignation.Text = employee.CurrentDesignation.Title;
-                    flag = false;
-                    break;
+        //private void FindCodeInEmployee()
+        //{
+        //    string code = comboBoxEmployeeCode.Text;
+        //    bool flag = true;
+        //    foreach (var employee in employeeList)
+        //    {
+        //        if (employee.Code == code)
+        //        {
+        //            Employee selectedEmployee = employee;
+        //            textBoxName.Text = employee.Name;
+        //            textBoxEmail.Text = employee.Email;
+        //            textBoxCurrentDesignation.Text = employee.CurrentDesignation.Title;
+        //            flag = false;
+        //            break;
 
-                }
-            }
-            if (flag) { MessageBox.Show("No Employe records found"); }
+        //        }
+        //    }
+        //    if (flag) { MessageBox.Show("No Employe records found"); }
+        //}
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Employee employee = FindEmployee();
+            employee.careerHistorieList[0].EndDate = DateTime.Today;
+
+            CareerHistory careerHistory = new CareerHistory();
+            careerHistory.StartDate = DateTime.Today;
+            careerHistory.EndDate = null;
+            careerHistory.Designation = (Designation)comboBoxNeDesigList.SelectedItem;
+            employee.careerHistorieList.Insert(0, careerHistory);
+
+            PopulateCareerHistoryListView();
         }
     }
 }

@@ -13,6 +13,12 @@ namespace AllClasses
         public double SalaryBasic { get; set; }
         public double HouseRent { get; set; }
         public double MedicalAmount { get; set; }
-        public double Total { get; set; }
+        public double Total
+        {
+            get
+            {
+                return SalaryBasic + HouseRent + MedicalAmount;
+            }
+        }
     }
 }

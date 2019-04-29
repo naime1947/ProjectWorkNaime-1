@@ -105,7 +105,7 @@ namespace ProjectWork
                 careerHistory.EndDate = null;
                 careerHistory.Designation = (Designation) comboBoxDesignation.SelectedValue;
 
-                employee.careerHistorieList.Add(careerHistory);
+                employee.careerHistorieList.Insert(0, careerHistory);
 
 
                 employeeList.Add(employee);
@@ -128,11 +128,12 @@ namespace ProjectWork
         private void PopulateEmployeeListView()
         {
             listViewEmployeList.Items.Clear();
+            int counter = 0;
             if (employeeList != null)
             {
                 foreach (var employee in employeeList)
                 {
-                    ListViewItem item = new ListViewItem();
+                    ListViewItem item = new ListViewItem((++counter).ToString());
                     item.SubItems.Add(employee.Code);
                     item.SubItems.Add(employee.Name);
                     item.SubItems.Add(employee.Email);

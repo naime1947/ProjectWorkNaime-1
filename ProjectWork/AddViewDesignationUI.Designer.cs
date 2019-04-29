@@ -158,6 +158,7 @@
             this.textBoxSalaryBasic.Name = "textBoxSalaryBasic";
             this.textBoxSalaryBasic.Size = new System.Drawing.Size(204, 20);
             this.textBoxSalaryBasic.TabIndex = 2;
+            this.textBoxSalaryBasic.TextChanged += new System.EventHandler(this.textBoxSalaryBasic_TextChanged);
             // 
             // label4
             // 
@@ -174,6 +175,7 @@
             this.textBoxHouseRent.Name = "textBoxHouseRent";
             this.textBoxHouseRent.Size = new System.Drawing.Size(204, 20);
             this.textBoxHouseRent.TabIndex = 3;
+            this.textBoxHouseRent.TextChanged += new System.EventHandler(this.textBoxHouseRent_TextChanged);
             // 
             // label5
             // 
@@ -190,6 +192,7 @@
             this.textBoxMedicalAmount.Name = "textBoxMedicalAmount";
             this.textBoxMedicalAmount.Size = new System.Drawing.Size(204, 20);
             this.textBoxMedicalAmount.TabIndex = 4;
+            this.textBoxMedicalAmount.TextChanged += new System.EventHandler(this.textBoxMedicalAmount_TextChanged);
             // 
             // label6
             // 
@@ -205,11 +208,13 @@
             // 
             this.textBoxTotal.Location = new System.Drawing.Point(104, 171);
             this.textBoxTotal.Name = "textBoxTotal";
+            this.textBoxTotal.ReadOnly = true;
             this.textBoxTotal.Size = new System.Drawing.Size(204, 20);
             this.textBoxTotal.TabIndex = 5;
             // 
             // AddViewDesignationUI
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 423);

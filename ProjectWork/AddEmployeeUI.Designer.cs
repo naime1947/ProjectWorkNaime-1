@@ -87,7 +87,7 @@
             this.textBoxEmail.Location = new System.Drawing.Point(85, 71);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(204, 20);
-            this.textBoxEmail.TabIndex = 1;
+            this.textBoxEmail.TabIndex = 2;
             // 
             // label3
             // 
@@ -103,7 +103,7 @@
             this.textBoxContactNo.Location = new System.Drawing.Point(85, 97);
             this.textBoxContactNo.Name = "textBoxContactNo";
             this.textBoxContactNo.Size = new System.Drawing.Size(204, 20);
-            this.textBoxContactNo.TabIndex = 1;
+            this.textBoxContactNo.TabIndex = 3;
             // 
             // label4
             // 
@@ -120,7 +120,7 @@
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(204, 36);
-            this.textBoxAddress.TabIndex = 1;
+            this.textBoxAddress.TabIndex = 4;
             // 
             // comboBoxDesignation
             // 
@@ -128,7 +128,7 @@
             this.comboBoxDesignation.Location = new System.Drawing.Point(85, 165);
             this.comboBoxDesignation.Name = "comboBoxDesignation";
             this.comboBoxDesignation.Size = new System.Drawing.Size(204, 21);
-            this.comboBoxDesignation.TabIndex = 2;
+            this.comboBoxDesignation.TabIndex = 5;
             // 
             // label5
             // 
@@ -153,14 +153,14 @@
             this.dateTimePickerJoiningDate.Location = new System.Drawing.Point(85, 192);
             this.dateTimePickerJoiningDate.Name = "dateTimePickerJoiningDate";
             this.dateTimePickerJoiningDate.Size = new System.Drawing.Size(204, 20);
-            this.dateTimePickerJoiningDate.TabIndex = 3;
+            this.dateTimePickerJoiningDate.TabIndex = 6;
             // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(203, 230);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(86, 23);
-            this.btnSave.TabIndex = 4;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -179,7 +179,7 @@
             this.listViewEmployeList.Location = new System.Drawing.Point(334, 19);
             this.listViewEmployeList.Name = "listViewEmployeList";
             this.listViewEmployeList.Size = new System.Drawing.Size(539, 258);
-            this.listViewEmployeList.TabIndex = 5;
+            this.listViewEmployeList.TabIndex = 0;
             this.listViewEmployeList.UseCompatibleStateImageBehavior = false;
             this.listViewEmployeList.View = System.Windows.Forms.View.Details;
             // 
@@ -248,8 +248,9 @@
             // 
             this.textBoxCode.Location = new System.Drawing.Point(85, 19);
             this.textBoxCode.Name = "textBoxCode";
+            this.textBoxCode.ReadOnly = true;
             this.textBoxCode.Size = new System.Drawing.Size(204, 20);
-            this.textBoxCode.TabIndex = 1;
+            this.textBoxCode.TabIndex = 0;
             // 
             // label7
             // 
@@ -265,7 +266,7 @@
             this.btnNew.Location = new System.Drawing.Point(111, 230);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(86, 23);
-            this.btnNew.TabIndex = 4;
+            this.btnNew.TabIndex = 8;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);

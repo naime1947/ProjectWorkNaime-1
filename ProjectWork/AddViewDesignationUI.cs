@@ -33,7 +33,6 @@ namespace ProjectWork
                 SalaryBasic = Convert.ToDouble(textBoxSalaryBasic.Text),
                 HouseRent = Convert.ToDouble(textBoxHouseRent.Text),
                 MedicalAmount = Convert.ToDouble(textBoxMedicalAmount.Text),
-                Total = Convert.ToDouble(textBoxTotal.Text)
             };
 
 
@@ -45,12 +44,13 @@ namespace ProjectWork
         private void PopulateListViewWithDesignation()
         {
             listViewDesignationView.Items.Clear();
+            int counter = 0;
             
             if (designationList != null)
             {
                 foreach (var designation in designationList)
                 {
-                    ListViewItem item = new ListViewItem();
+                    ListViewItem item = new ListViewItem((++counter).ToString());
                     item.SubItems.Add(designation.Title);
                     item.SubItems.Add(designation.Code);
                     item.SubItems.Add(designation.SalaryBasic.ToString());
@@ -69,6 +69,40 @@ namespace ProjectWork
         private void AddViewDesignationUI_Load(object sender, EventArgs e)
         {
             PopulateListViewWithDesignation();
+        }
+
+        private void textBoxSalaryBasic_TextChanged(object sender, EventArgs e)
+        {
+            SetTotalSalaryTextBox();
+        }
+
+        private void SetTotalSalaryTextBox()
+        {
+            try
+            {
+                double basic=0;
+                double house=0;
+                double Medical=0;
+                try { basic = Convert.ToDouble(textBoxSalaryBasic.Text); } catch { }
+                try { house = Convert.ToDouble(textBoxHouseRent.Text);} catch { }
+                try { Medical = Convert.ToDouble(textBoxMedicalAmount.Text);} catch { }
+                textBoxTotal.Text = (basic + house + Medical).ToString();
+            }
+            catch (Exception)
+            {
+
+                
+            }
+        }
+
+        private void textBoxHouseRent_TextChanged(object sender, EventArgs e)
+        {
+            SetTotalSalaryTextBox();
+        }
+
+        private void textBoxMedicalAmount_TextChanged(object sender, EventArgs e)
+        {
+            SetTotalSalaryTextBox();
         }
     }
 }
