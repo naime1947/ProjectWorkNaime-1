@@ -29,8 +29,17 @@ namespace ProjectWork
 
         private void PromotionUI_Load(object sender, EventArgs e)
         {
-            comboBoxEmployeeCode.DataSource = employeeList;
+            btnSave.Enabled = false;
+
             comboBoxEmployeeCode.DisplayMember = "Code";
+
+            foreach (var employee in employeeList)
+            {
+                if (employee.IsWorking)
+                {
+                    comboBoxEmployeeCode.Items.Add(employee);
+                }
+            }
 
             comboBoxNeDesigList.DataSource = designationList;
             comboBoxNeDesigList.DisplayMember = "Title";
@@ -48,10 +57,12 @@ namespace ProjectWork
                 textBoxName.Text = employee.Name;
                 textBoxEmail.Text = employee.Email;
                 textBoxCurrentDesignation.Text = employee.CurrentDesignation.Title;
+                PopulateCareerHistoryListView();
+                btnSave.Enabled = true;
             }
             else { MessageBox.Show("Rocords Not Found"); }
 
-            PopulateCareerHistoryListView();
+            
         }
 
         private Employee FindEmployee()
@@ -119,6 +130,8 @@ namespace ProjectWork
             employee.careerHistorieList.Insert(0, careerHistory);
 
             PopulateCareerHistoryListView();
+            MessageBox.Show("New Designation Updated");
+            btnSave.Enabled = false;
         }
     }
 }

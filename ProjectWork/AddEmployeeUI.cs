@@ -15,17 +15,17 @@ namespace ProjectWork
     {
         private List<Employee> employeeList;
         private List<Designation> designationList;
-        int CodeIncrimenter=0;
 
         public AddEmployeeUI()
         {
             InitializeComponent();
         }
-
+       
         public AddEmployeeUI(List<Employee> employeeList, List<Designation> designationList):this()
         {
             this.employeeList = employeeList;
             this.designationList = designationList;
+
         }
 
         private void AddEmployeeUI_Load(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace ProjectWork
             if (designationList.Count > 0)
             {
                 EnableButtonAndFields();
-                textBoxCode.Text = Convert.ToString(CodeIncrimenter += 1);
+                textBoxCode.Text = Convert.ToString(CodeGenerator());
                 PopulateDesignationCombo();
             }
             else
@@ -60,6 +60,18 @@ namespace ProjectWork
                 MessageBox.Show("Please add some designations first");
             }
             
+        }
+
+        private int CodeGenerator()
+        {
+            if (employeeList != null)
+            {
+                return employeeList.Count + 1;
+            }
+            else
+            {
+                return 1;
+            }
         }
 
         private void PopulateDesignationCombo()
@@ -97,7 +109,8 @@ namespace ProjectWork
                     ContactNo = textBoxContactNo.Text,
                     Email = textBoxEmail.Text,
                     Address = textBoxAddress.Text,
-                    JoiningDate = dateTimePickerJoiningDate.Value
+                    JoiningDate = dateTimePickerJoiningDate.Value,
+                    
                 };
 
                 CareerHistory careerHistory = new CareerHistory();
@@ -133,16 +146,20 @@ namespace ProjectWork
             {
                 foreach (var employee in employeeList)
                 {
-                    ListViewItem item = new ListViewItem((++counter).ToString());
-                    item.SubItems.Add(employee.Code);
-                    item.SubItems.Add(employee.Name);
-                    item.SubItems.Add(employee.Email);
-                    item.SubItems.Add(employee.ContactNo);
-                    item.SubItems.Add(employee.Address);
-                    item.SubItems.Add(employee.CurrentDesignation.Title);
-                    item.SubItems.Add(employee.JoiningDate.ToShortDateString());
+                    if (employee.IsWorking)
+                    {
+                        ListViewItem item = new ListViewItem((++counter).ToString());
+                        item.SubItems.Add(employee.Code);
+                        item.SubItems.Add(employee.Name);
+                        item.SubItems.Add(employee.Email);
+                        item.SubItems.Add(employee.ContactNo);
+                        item.SubItems.Add(employee.Address);
+                        item.SubItems.Add(employee.CurrentDesignation.Title);
+                        item.SubItems.Add(employee.JoiningDate.ToShortDateString());
 
-                    listViewEmployeList.Items.Add(item);
+                        listViewEmployeList.Items.Add(item);
+                    }
+                    
                 }
             }
         }

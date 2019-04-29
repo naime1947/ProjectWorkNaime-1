@@ -13,6 +13,7 @@ namespace AllClasses
         public string Email { get; set; }
         public string ContactNo { get; set; }
         public string Address { get; set; }
+        public bool IsWorking { get; set; } = true;
         public Designation CurrentDesignation
         { get
             {

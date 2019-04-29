@@ -51,7 +51,7 @@ namespace ProjectWork
 
         private void resignationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EmployeeResignationUI employeeResignationUi = new EmployeeResignationUI();
+            EmployeeResignationUI employeeResignationUi = new EmployeeResignationUI(employeeList,designationList);
             employeeResignationUi.Show();
         }
 

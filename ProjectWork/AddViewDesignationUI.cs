@@ -27,17 +27,28 @@ namespace ProjectWork
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Designation designation = new Designation() {
-                Title = textBoxTitle.Text,
-                Code = textBoxCode.Text,
-                SalaryBasic = Convert.ToDouble(textBoxSalaryBasic.Text),
-                HouseRent = Convert.ToDouble(textBoxHouseRent.Text),
-                MedicalAmount = Convert.ToDouble(textBoxMedicalAmount.Text),
-            };
+            try
+            {
+                Designation designation = new Designation()
+                {
+                    Title = textBoxTitle.Text,
+                    Code = textBoxCode.Text,
+                    SalaryBasic = Convert.ToDouble(textBoxSalaryBasic.Text),
+                    HouseRent = Convert.ToDouble(textBoxHouseRent.Text),
+                    MedicalAmount = Convert.ToDouble(textBoxMedicalAmount.Text),
+                };
 
 
-            designationList.Add(designation);
-            PopulateListViewWithDesignation();
+                designationList.Add(designation);
+                PopulateListViewWithDesignation();
+                MessageBox.Show("Added");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Double Check Your Entries");
+            }
+            
 
         }
 

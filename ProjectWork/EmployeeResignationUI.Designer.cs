@@ -28,34 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.comboBoxEmployeeCode = new System.Windows.Forms.ComboBox();
+            this.btnFind = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxCurrentDesignation = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.btnResign = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // comboBoxEmployeeCode
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(103, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 6;
+            this.comboBoxEmployeeCode.FormattingEnabled = true;
+            this.comboBoxEmployeeCode.Location = new System.Drawing.Point(103, 30);
+            this.comboBoxEmployeeCode.Name = "comboBoxEmployeeCode";
+            this.comboBoxEmployeeCode.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxEmployeeCode.TabIndex = 6;
             // 
-            // button2
+            // btnFind
             // 
-            this.button2.Location = new System.Drawing.Point(227, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Find";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnFind.Location = new System.Drawing.Point(227, 28);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(75, 23);
+            this.btnFind.TabIndex = 5;
+            this.btnFind.Text = "Find";
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // label1
             // 
@@ -93,35 +94,36 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Name";
             // 
-            // textBox3
+            // textBoxCurrentDesignation
             // 
-            this.textBox3.Location = new System.Drawing.Point(110, 127);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 20);
-            this.textBox3.TabIndex = 7;
+            this.textBoxCurrentDesignation.Location = new System.Drawing.Point(110, 127);
+            this.textBoxCurrentDesignation.Name = "textBoxCurrentDesignation";
+            this.textBoxCurrentDesignation.Size = new System.Drawing.Size(114, 20);
+            this.textBoxCurrentDesignation.TabIndex = 7;
             // 
-            // textBox1
+            // textBoxEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 20);
-            this.textBox1.TabIndex = 8;
+            this.textBoxEmail.Location = new System.Drawing.Point(110, 101);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(114, 20);
+            this.textBoxEmail.TabIndex = 8;
             // 
-            // textBox2
+            // textBoxName
             // 
-            this.textBox2.Location = new System.Drawing.Point(110, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 20);
-            this.textBox2.TabIndex = 9;
+            this.textBoxName.Location = new System.Drawing.Point(110, 75);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(114, 20);
+            this.textBoxName.TabIndex = 9;
             // 
-            // button1
+            // btnResign
             // 
-            this.button1.Location = new System.Drawing.Point(149, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Resign";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnResign.Location = new System.Drawing.Point(149, 153);
+            this.btnResign.Name = "btnResign";
+            this.btnResign.Size = new System.Drawing.Size(75, 23);
+            this.btnResign.TabIndex = 5;
+            this.btnResign.Text = "Resign";
+            this.btnResign.UseVisualStyleBackColor = true;
+            this.btnResign.Click += new System.EventHandler(this.btnResign_Click);
             // 
             // EmployeeResignationUI
             // 
@@ -131,16 +133,17 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBoxCurrentDesignation);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.comboBoxEmployeeCode);
+            this.Controls.Add(this.btnResign);
+            this.Controls.Add(this.btnFind);
             this.Controls.Add(this.label1);
             this.Name = "EmployeeResignationUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Resignation";
+            this.Load += new System.EventHandler(this.EmployeeResignationUI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,15 +151,15 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBoxEmployeeCode;
+        private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxCurrentDesignation;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.Button btnResign;
     }
 }
