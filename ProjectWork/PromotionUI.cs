@@ -61,8 +61,6 @@ namespace ProjectWork
                 btnSave.Enabled = true;
             }
             else { MessageBox.Show("Rocords Not Found"); }
-
-            
         }
 
         private Employee FindEmployee()

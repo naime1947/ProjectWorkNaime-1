@@ -45,7 +45,7 @@ namespace ProjectWork
 
         private void viewMonthlySalaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ViewMonthlySalaryUI viewMonthlySalaryUi = new ViewMonthlySalaryUI();
+            ViewMonthlySalaryUI viewMonthlySalaryUi = new ViewMonthlySalaryUI(employeeList);
             viewMonthlySalaryUi.Show();
         }
 
