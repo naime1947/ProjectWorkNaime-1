@@ -141,6 +141,7 @@
             this.btnPdf.TabIndex = 6;
             this.btnPdf.Text = "PDF";
             this.btnPdf.UseVisualStyleBackColor = true;
+            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
             // 
             // columnHeader4
             // 
