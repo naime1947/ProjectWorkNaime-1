@@ -45,6 +45,8 @@ namespace ProjectWork
             comboBoxDesignation.Enabled = false;
             btnSave.Enabled = false;
             dateTimePickerJoiningDate.Enabled = false;
+            btnCancel.Visible = false;
+            btnNew.Visible = true;
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -90,8 +92,9 @@ namespace ProjectWork
             textBoxEmail.Enabled = true;
             comboBoxDesignation.Enabled = true;
             btnSave.Enabled = true;
-            btnNew.Enabled = false;
+            btnNew.Visible = false;
             dateTimePickerJoiningDate.Enabled = true;
+            btnCancel.Visible = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -99,7 +102,7 @@ namespace ProjectWork
             if (!FieldsAreEmpty())
             {
                 DisbableAndBacktoNewButton();
-                btnNew.Enabled = true;
+                
 
                 Employee employee = new Employee()
                 {
@@ -177,6 +180,11 @@ namespace ProjectWork
                 MessageBox.Show("Email is not valid");
                 return false;
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DisbableAndBacktoNewButton();
         }
     }
 }
