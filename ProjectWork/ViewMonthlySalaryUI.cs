@@ -115,7 +115,7 @@ namespace ProjectWork
                 foreach (ListViewItem itemRow in listViewShowDetails.Items)
                 {
                     int i = 0;
-                    for (i = 0; i < itemRow.SubItems.Count - 1; i++)
+                    for (i = 0; i <= itemRow.SubItems.Count - 1; i++)
                     {
                         pdfTable.AddCell(itemRow.SubItems[i].Text);
                     }
@@ -128,13 +128,16 @@ namespace ProjectWork
                 
                 Paragraph p1 = new Paragraph("Total Salary Amount\n");
                 p1.Alignment = Element.ALIGN_CENTER;
-                Paragraph p2 = new Paragraph("Year : "+comboBoxYear.SelectedText+"\n");
+                Paragraph p2 = new Paragraph("Year : "+comboBoxYear.SelectedItem.ToString()+"\n");
                 p2.Alignment = Element.ALIGN_CENTER;
-                Paragraph p3 = new Paragraph("Month : " + comboBoxMonth.SelectedText+"\n");
+                Paragraph p3 = new Paragraph("Month : " + comboBoxMonth.SelectedItem.ToString()+"\n\n");
                 p3.Alignment = Element.ALIGN_CENTER;
+                Paragraph p4 = new Paragraph("Total Amount : " + textBoxTotal.Text + "\n\n");
+                p4.Alignment = Element.ALIGN_CENTER;
                 pdf.Add(p1);
                 pdf.Add(p2);
                 pdf.Add(p3);
+                pdf.Add(p4);
                 pdf.Add(pdfTable);
                 pdf.Close();
                 MessageBox.Show("Pdf Generated. Location : " + saveFile.FileName);
