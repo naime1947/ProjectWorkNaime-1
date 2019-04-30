@@ -33,7 +33,7 @@ namespace ProjectWork
 
         private void ViewMonthlySalaryUI_Load(object sender, EventArgs e)
         {
-            comboBoxYear.DataSource = Enumerable.Range(1983, DateTime.Now.Year - 1983 + 1).ToList();
+            comboBoxYear.DataSource = Enumerable.Range(2010, DateTime.Now.Year - 2010 + 1).ToList();
             comboBoxYear.SelectedItem = DateTime.Now.Year;
 
             comboBoxMonth.DataSource = CultureInfo.InvariantCulture.DateTimeFormat
